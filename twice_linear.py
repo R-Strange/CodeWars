@@ -33,9 +33,11 @@ def dbl_linear_old(n):
     return u[n]
 start_time = time.time()
 
-print(dbl_linear_old(9999))
+print(dbl_linear_old(20000))
 
-print("Process finished:", time.time() - start_time)
+print("Process finished:", time.time() - start_time)  # takes 37.314576148986816 seconds
+
+
 import heapq 
 
 def dbl_linear(n):
@@ -50,5 +52,9 @@ def dbl_linear(n):
                 heapq.heappush(u, f)
     return heapq.heappop(u)
 start_time = time.time()
-print(dbl_linear(9999))
-print("Process finished:", time.time() - start_time)
+print(dbl_linear(20000))
+print("Process finished:", time.time() - start_time)  # 0.011563777923583984 seconds
+
+start_time = time.time()
+print(dbl_linear(9999999))
+print("Process finished:", time.time() - start_time)  # 9.4422447681427 seconds
